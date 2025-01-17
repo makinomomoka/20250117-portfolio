@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.cormorant-sc-light {
+  font-family: "Cormorant SC", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-sc-regular {
+  font-family: "Cormorant SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-sc-medium {
+  font-family: "Cormorant SC", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-sc-semibold {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-sc-bold {
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.itim-regular {
+  font-family: "Itim", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin-left: 300px;
+}
+
+/* 全体リンク */
+a {
+  text-decoration: none;
+  color: #0B4F6C;
+  transition: 0.5s;
+}
+
+a:hover{
+  text-decoration: solid;
+  background-color: #0B4F6C;
+  color: #d8e572;
+}
+
+.top img{
+  display: block;
+}
+
+.top img:hover{
+  opacity: 0.8;
+}
+/* 文字色 */
+p{
+  color: #0B4F6C;
+
+}
+
+/****************************
+* サイドバー
+*****************************/
+.sidebar {
+  background: #A9E190;
+  color: #0B4F6C;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.sidebar img {
+  margin-top: 35px;
+}
+
+/*** side-p ***/
+.side-p {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 75px;
+}
+
+.li-ti {
+  font-size: 20px;
+  padding: 0 120px;
+  font-family: "Itim";
+
+}
+
+.sidebar li {
+  font-size: 20px;
+  font-family: "Itim";
+}
+
+
+/****************************
+* ヘッダー
+*****************************/
+
+.main-v {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("../img/main-img.png")center / cover;
+}
+
+.header-pf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%,-50%);
+  font-size: 96px;
+  -webkit-text-stroke: 1px #0B4F6C;
+  color: #CDC776;
+  font-family: "Cormorant SC";
+  font-weight: 700;
+}
+
+/****************************
+* メイン
+*****************************/
+
+main {
+  position: relative;
+  z-index: 1;
+  background: #DBF4AD;
+  padding: 40px 0;
+  /* background-image: url(../img/back-1.png),url(../img/back-2.png);
+  background-position: top right, bottom left;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat, no-repeat; */
+}
+/* 
+  メインの下に同サイズの空のレイヤーを作る
+  そのレイヤーに背景画像を設定し、z-indexを-1にして最背面にする
+  透過度を設定することで、背景画像を透かすことができる
+*/
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/back-1.png),url(../img/back-2.png);
+  background-position: top right, bottom left;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+h2 {
+  color: #0B4F6C;
+  font-family: "Itim";
+  margin:0 0 40px 0;
+  padding: 40px;
+  font-size:64px;
+  display: flex;
+  padding: 16px 0;
+  justify-content: center;
+  align-items: center;
+  background-size: 18px 3px;
+  background-image: linear-gradient(to right, #0B4F6C 9px, transparent 9px);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  padding-bottom: 5px;
+}
+
+.h2-other{
+  margin: 40px 0;
+}
+
+h3{
+  font-size: 32px;
+  color: #0B4F6C;
+}
+
+/* about */
+#about-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+}
+
+.name span{
+  font-size: 20px;
+}
+
+.name{
+  flex-direction: column;
+  font-size: 36px;
+}
+
+/* hobby */
+
+#hobby-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.ho{
+  display: flex;
+  align-items: center;
+  gap: 96px;
+}
+
+.ho-p{
+  flex-direction: column;
+  font-size: 20px;
+}
+
+/* work */
+#work-sec{
+  display: flex;
+  width: 1140px;
+  padding: 40px 100px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 80px 120px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.wo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 278px;
+}
+
+.wo-p {
+  text-align: center;
+  background: #C2F4A3;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* skills */
+#skills-sec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin: 40px 0;
+}
+
+.ca-p{
+  font-size: 24px;
+  text-align:center;
+  padding:20px 0;
+}
+
+.card{
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ca-icon p{
+  margin: 0;
+  font-size: 24px;
+}
+
+/* contact */
+#contact-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.con-p{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn-area {
+  /* width: 220px;
+  height: 40px; */
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 26px;
+  align-items: center;
+}
+button {
+  padding: 16px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #C2F4A3;
+  opacity: .8;
+  border: 1px solid #0B4F6C;
+  color: #0B4F6C;
+  transition: 0.5s;
+
+}
+
+.btn-area :hover{
+  background: #0B4F6C;
+  opacity: .8;
+  border: 1px solid #C2F4A3;
+  color: #C2F4A3;
+}
+
+
+input {
+  width: 400px;
+  max-width: 100%;
+  padding: 8px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.0;
+  background: #F6F6F6;
+  opacity: .7;
+}
+
+textarea {
+  width: 500px;
+  max-width: 100%;
+  min-height: 300px;
+  padding: 8px;
+  border: none;
+  font-size: 20px;
+  line-height: 1.6;
+  resize: vertical;
+  background: #F6F6F6;
+  opacity: .7;
+}
+
+
+
+/****************************
+* フッター
+*****************************/
+footer{
+  background-color: #A9E190;
+  color: #0B4F6C;
+  display: flex;
+  height: 100px;
+  padding: 0px 445px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* レスポンシブ */
+
+@media(max-width:500px){
+  .wrapper{
+    margin: 0;
+  }
+  a{
+    transition: 0.1s;
+
+  }
+  /* header{
+    width: 100%;
+  } */
+  .header-pf{
+    font-size: 5rem;
+  }
+  
+  .sidebar{
+    display: none;
+  }
+  .name,
+  .ho-p{
+    text-align: center;
+  }
+  #about-sec,
+  .ho,
+  #work-sec,
+  .card,
+  #contact-sec{
+    width: auto;
+    flex-direction: column;
+    gap: 32px;
+    margin: 12px;
+  }
+  .ho-2{
+    flex-direction: column-reverse;
+  }
+
+  .con-p{
+    width: 300px;
+    text-align: left;
+  }
+  input,
+  textarea{
+    width: 300px;
+  }
+
+  footer{
+    padding: 0;
+  }
+
+
+}
