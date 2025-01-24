@@ -288,14 +288,13 @@ h3{
 }
 
 .card{
-   display: flex;
+  display: flex;
   width: 756px;
   padding: 24px 32px;
   align-items: center;
   gap: 40px;
   background: #C2F4A3;
   border-radius: 12px;
-
 }
 
 .ca-icon p{
@@ -393,10 +392,14 @@ main{
 
 
 .complete p{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%,-50%); */
   font-size: 40px;
   font-weight: 700;
 }
-
 
 /****************************
 * フッター
