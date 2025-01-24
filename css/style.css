@@ -371,6 +371,31 @@ textarea {
   opacity: .7;
 }
 
+/****************************
+* complete 
+*****************************/
+.complete{
+  width: 100%;
+  text-align: center;
+  display: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%,-50%); 
+
+}
+
+main{
+  position: relative;
+  min-height: 100vh;
+}
+
+
+.complete p{
+  font-size: 40px;
+  font-weight: 700;
+}
 
 
 /****************************
