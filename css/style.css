@@ -463,6 +463,13 @@ footer{
     flex-direction: column-reverse;
   }
 
+  
+    .complete p{
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+
   .con-p{
     width: 300px;
     text-align: left;
