@@ -150,7 +150,8 @@ p{
 * メイン
 *****************************/
 
-main {
+.ind-main,
+.copm-main{
   position: relative;
   z-index: 1;
   background: #DBF4AD;
@@ -165,7 +166,8 @@ main {
   そのレイヤーに背景画像を設定し、z-indexを-1にして最背面にする
   透過度を設定することで、背景画像を透かすことができる
 */
-main::before {
+.ind-main::before,
+.copm-main::before{
   content: "";
   position: absolute;
   top: 0;
@@ -179,6 +181,8 @@ main::before {
   opacity: 0.2;
   z-index: -1;
 }
+
+
 h2 {
   color: #0B4F6C;
   font-family: "Itim";
