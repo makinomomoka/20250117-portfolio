@@ -182,6 +182,11 @@ p{
   z-index: -1;
 }
 
+.copm-main::before{
+  background-image: url(../img/back-1.png);
+}
+
+
 
 h2 {
   color: #0B4F6C;
